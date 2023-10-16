@@ -1,10 +1,10 @@
 {
-    "name": "aaemnnosttv/wp-cli-dotenv-command",
+    "name": "jazzman/wp-cli-dotenv-command",
     "description": "Dotenv commands for WP-CLI",
     "type": "wp-cli-package",
-    "homepage": "https://aaemnnost.tv/wp-cli-commands/dotenv/",
+    "homepage": "https://github.com/Jazz-Man/wp-performance",
     "support": {
-        "issues": "https://github.com/aaemnnosttv/wp-cli-dotenv-command/issues"
+        "issues": "https://github.com/Jazz-Man/wp-performance/issues"
     },
     "license": "MIT",
     "authors": [
@@ -12,6 +12,10 @@
             "name": "Evan Mattson",
             "email": "me@aaemnnost.tv",
             "homepage": "https://aaemnnost.tv"
+        },
+        {
+            "name": "Vasyl Sokolyk",
+            "email": "vsokolyk@gmail.com"
         }
     ],
     "scripts": {
@@ -20,18 +24,26 @@
             "behat"
         ],
         "phpunit": "phpunit",
-        "behat": "behat"
+        "behat": "behat",
+        "prepare-tests": "install-package-tests"
     },
     "require": {
-        "php": "^7.4 || ^8.0"
+        "php": "^8.0"
     },
     "require-dev": {
+        "jazzman/php-cs-fixer-rules": "^0.2.0",
+        "jetbrains/phpstorm-attributes": "^1.0",
         "phpunit/phpunit": "^9 || ^10",
-        "wp-cli/wp-cli-tests": "^3.0"
+        "roave/security-advisories": "@dev",
+        "wp-cli/wp-cli-tests": "^3.2"
     },
     "autoload": {
-        "psr-4": {"WP_CLI_Dotenv\\": "src/"},
-        "files": ["command.php"]
+        "psr-4": {
+            "WP_CLI_Dotenv\\": "src/"
+        },
+        "files": [
+            "command.php"
+        ]
     },
     "autoload-dev": {
         "classmap": ["tests/Fixtures.php"],
@@ -41,6 +53,11 @@
     },
     "config": {
         "sort-packages": true,
+        "preferred-install": "dist",
+        "optimize-autoloader": true,
+        "classmap-authoritative": true,
+        "apcu-autoloader": true,
+        "process-timeout": 1800,
         "allow-plugins": {
             "dealerdirect/phpcodesniffer-composer-installer": true
         }
