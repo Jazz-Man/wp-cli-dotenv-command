@@ -1,8 +1,5 @@
 # WP-CLI Dotenv Command
 
-[![Travis Build](https://img.shields.io/travis/aaemnnosttv/wp-cli-dotenv-command/master.svg)](https://travis-ci.org/aaemnnosttv/wp-cli-dotenv-command)
-[![Packagist](https://img.shields.io/packagist/v/aaemnnosttv/wp-cli-dotenv-command.svg)](https://packagist.org/packages/aaemnnosttv/wp-cli-dotenv-command)
-
 ```
 NAME
 
@@ -90,10 +87,7 @@ Same as `generate`, but will update all keys for salts with new values.
 
 As of WP-CLI v0.23, you may install the dotenv command using the new `package` command:
 ```
-wp package install aaemnnosttv/wp-cli-dotenv-command:^2.0
+wp package install jazzman/wp-cli-dotenv-command
 ```
-
-For installation with prior versions of WP-CLI, [see the wiki](https://github.com/aaemnnosttv/wp-cli-dotenv-command/wiki).
-
 
 That's it!  Now you should see the `dotenv` command as an option when you run `wp` from any directory.
